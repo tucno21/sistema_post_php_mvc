@@ -23,7 +23,7 @@ $menuSession = [
     ],
     [
         'text' => 'Cerrar sesión',
-        'url'  => 'admin/settings',
+        'url'  => 'final',
         'icon' => 'fas fa-times-circle',
     ],
 ];

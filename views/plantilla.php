@@ -30,7 +30,8 @@ if (isset($_SESSION["inicioSession"]) && $_SESSION["inicioSession"] == "ok") {
             $_GET["ruta"] == "clientes" ||
             $_GET["ruta"] == "ventas" ||
             $_GET["ruta"] == "crear-ventas" ||
-            $_GET["ruta"] == "reportes"
+            $_GET["ruta"] == "reportes" ||
+            $_GET["ruta"] == "final"
         ) {
             include "modules/" . $_GET["ruta"] . ".php";
         } else {
