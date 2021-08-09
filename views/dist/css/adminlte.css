@@ -35403,7 +35403,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 
 .login-logo a,
 .register-logo a {
-  color: #495057;
+  color: #fff;
 }
 
 .login-page,
@@ -35411,7 +35411,8 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #e9ecef;
+  background-color: rgb(2,0,36);
+  background: linear-gradient(rgba(2,0,36,1), rgba(0,30,50,1));
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -35444,10 +35445,11 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 
 .login-card-body,
 .register-card-body {
-  background-color: #fff;
+  background-color: rgb(255, 254, 211);
   border-top: 0;
   color: #666;
   padding: 20px;
+  border-radius:5px;
 }
 
 .login-card-body .input-group .form-control,

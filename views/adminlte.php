@@ -5,7 +5,7 @@ $linkURL = 'views/';
 // DATOS GENERALES ADMIN
 $titleBar = 'Sistema MVC';
 $title = 'Sistema <b>MVC</b>';
-$titlelogin = '<b>Admin</b>LTE';
+$titlelogin = 'Sistema <b>MVC</b>';
 $logo = 'views/dist/img/AdminLTELogo.png';
 $mainLink = 'inicio';
 

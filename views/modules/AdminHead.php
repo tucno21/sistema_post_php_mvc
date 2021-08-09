@@ -13,7 +13,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="<?php echo $linkURL; ?>plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="<?php echo $linkURL; ?>dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="<?php echo $linkURL; ?>dist/css/adminlte.css">
 </head>
 
 <body class="hold-transition sidebar-mini sidebar-collapse">
