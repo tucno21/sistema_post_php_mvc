@@ -8,9 +8,9 @@
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Ingresar al sistema</p>
 
-                <form action="../../index3.html" method="post">
+                <form method="post">
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email" name="email" required>
+                        <input type="text" class="form-control" placeholder="Email" name="usuario" required>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -33,6 +33,12 @@
                         </div>
                         <!-- /.col -->
                     </div>
+
+                    <?php
+                    $login = new ControllerUsuarios();
+                    $login->ingresoUsuario();
+                    ?>
+
                 </form>
 
             </div>
