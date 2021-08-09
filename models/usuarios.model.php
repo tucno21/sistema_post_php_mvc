@@ -1,6 +1,6 @@
 <?php
-
-
+//llamar la coneccion de MYSQL
+require_once "conexion.php";
 
 class ModeloUsuarios
 {
