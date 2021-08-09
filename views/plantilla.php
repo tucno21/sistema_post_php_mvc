@@ -1,4 +1,6 @@
 <?php
+//metodo para que se aplique las variables de la sesion
+session_start();
 
 // variables generales y creador de muna lateral
 include 'adminlte.php';
