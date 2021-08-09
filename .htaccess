@@ -1,0 +1,10 @@
+#impedir el listado de directorios a traves de la URL - ocultar todas las carpetas
+Options All -Indexes
+
+#URL amigable - permitir listado
+#reescribir los permisos y habilitar
+RewriteEngine On
+
+#nueva regla dentro de una expresion regular ^()
+#$1 comvierte en un url amigable
+RewriteRule ^([-a-zA-Z0-9/]+)$ index.php?ruta=$1
