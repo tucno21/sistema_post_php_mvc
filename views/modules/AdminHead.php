@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="<?php echo $linkURL; ?>plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo $linkURL; ?>dist/css/adminlte.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="<?php echo $linkURL; ?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?php echo $linkURL; ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?php echo $linkURL; ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini sidebar-collapse">
