@@ -22,7 +22,7 @@
             </div>
 
             <div class="card-body">
-                <table class="table table-bordered table-striped table-responsive dtr-inline tablas">
+                <table class="table table-bordered table-striped dtr-inline dt-responsive tablas ">
                     <thead>
                         <tr>
                             <th>N°</th>
