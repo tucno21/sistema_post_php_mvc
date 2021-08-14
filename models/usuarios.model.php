@@ -17,5 +17,11 @@ class ModeloUsuarios
 
         //enviar al controlador usuario
         return $stmt->fetch();
+
+        //cerrar 
+        $stmt->close();
+
+        //
+        $stmt->null;
     }
 }

@@ -57,6 +57,8 @@
                 FOOTER
             </div>
         </div>
+
+
     </section>
     <!-- /.content -->
 </div>
@@ -66,7 +68,7 @@
 <div class="modal fade" id="modalAgregarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form role="form" method="POST" enctype="multipart/form-data">
+            <form role="form" method="post" action="" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#343a40; color:#fff">
                     <h5 class="modal-title">Agregar Usuario</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -90,7 +92,7 @@
                                 <div class="input-group-prepend">
                                     <spam class="input-group-text"><i class="fa fa-key"></i></spam>
                                 </div>
-                                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar Usuario" required>
+                                <input type="text" class="form-control input-lg" name="nuevoUsiario" placeholder="Ingresar Usuario" required>
                             </div>
                         </div>
                         <!-- contraseña -->
@@ -134,14 +136,6 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary">Agregar</button>
                 </div>
-
-                <?php
-
-                $crearUsuario = new ControllerUsuarios();
-                $crearUsuario->strCrearUsuario();
-
-                ?>
-
             </form>
         </div>
     </div>

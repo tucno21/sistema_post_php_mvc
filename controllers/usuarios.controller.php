@@ -34,4 +34,34 @@ class ControllerUsuarios
             }
         }
     }
+
+
+    public static function strCrearUsuario()
+    {
+
+        if (isset($_POST["nuevoUsuario"])) {
+
+            //VALIDANDO ususario con tildes
+            if (
+                preg_match('/^[a-zA-z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevoNombre"]) &&
+                preg_match('/^[a-zA-z0-9]+$/', $_POST["nuevoUsuario"]) &&
+                preg_match('/^[a-zA-z0-9]+$/', $_POST["nuevoPassword"])
+            ) {
+            } else {
+                echo '<script type="text/javascript">
+                    Swal.fire({
+                        icon: "error",
+                        title: "El usuario no puede ir vacio o caracteres especiales...",
+                        showConfirmButton: true,
+                        confirmButtonText: "Cerrar",
+                        closeOnConfirm:false
+                    }).then((result)=>{
+                        if(result.value){
+                        window.location = "usuarios"
+                        }
+                    });
+                </script>';
+            }
+        }
+    }
 }

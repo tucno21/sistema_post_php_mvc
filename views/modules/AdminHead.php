@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="<?php echo $linkURL; ?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="<?php echo $linkURL; ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="<?php echo $linkURL; ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- SweetAlert2 -->
+    <script src="<?php echo $linkURL; ?>plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="<?php echo $linkURL; ?>plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini sidebar-collapse">
