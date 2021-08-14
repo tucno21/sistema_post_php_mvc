@@ -122,9 +122,9 @@
                             <div class="border border-secondary">
                                 <p CLASS="text-center">SUBIR FOTO</p>
 
-                                <input type="file" class="form-control input-lg" name="nuevoFoto" id="nuevoFoto">
+                                <input type="file" name="nuevoFoto" class="nuevoFoto">
                                 <p class=help-block>Peso máximo de 1mb</p>
-                                <img src="views/dist/img/avatar.png" alt="avatar" class="img-thumbnail" width="70px">
+                                <img src="views/dist/img/avatar.png" alt="avatar" class="img-thumbnail previsualizar" width="70px">
                             </div>
 
                         </div>

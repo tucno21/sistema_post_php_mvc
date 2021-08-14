@@ -21,6 +21,7 @@
 <script src="<?php echo $linkURL; ?>plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <!-- MOD PERSONAL -->
 <script src="<?php echo $linkURL; ?>js/plantilla.js"></script>
+<script src="<?php echo $linkURL; ?>js/usuarios.js"></script>
 <!-- <script src="<?php echo $linkURL; ?>js/sweetalert2.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 <!-- SweetAlert2 -->
