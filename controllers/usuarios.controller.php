@@ -11,6 +11,7 @@ class ControllerUsuarios
                 preg_match('/^[a-zA-z0-9]+$/', $_POST["usuario"]) &&
                 preg_match('/^[a-zA-z0-9]+$/', $_POST["password"])
             ) {
+                $encritar = crypt($_POST["password"], '$2a$07$usesomesillystringforsalt$');
                 //variable para las consultas
                 $table = "usuarios";
                 $colum =  "usuario";
@@ -21,7 +22,7 @@ class ControllerUsuarios
                 $respuesta = ModeloUsuarios::MostrarUsuario($table, $colum, $valorColum);
 
                 //comparar el ingreso con la tabla
-                if ($respuesta["usuario"] == $_POST["usuario"] && $respuesta["password"] == $_POST["password"]) {
+                if ($respuesta["usuario"] == $_POST["usuario"] && $respuesta["password"] == $encritar) {
 
                     //crear variable de la sesion
                     $_SESSION["inicioSession"] = "ok";
@@ -97,10 +98,12 @@ class ControllerUsuarios
 
                 $tabla = "usuarios";
 
+                $encritar = crypt($_POST['nuevoPassword'], '$2a$07$usesomesillystringforsalt$');
+
                 $datos = array(
                     "nombre" => $_POST["nuevoNombre"],
                     "usuario" => $_POST["nuevoUsuario"],
-                    "password" => $_POST["nuevoPassword"],
+                    "password" => $encritar,
                     "perfil" => $_POST["nuevoPerfil"],
                     "foto" => $ruta
                 );
