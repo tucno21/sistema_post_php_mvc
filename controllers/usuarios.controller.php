@@ -47,13 +47,62 @@ class ControllerUsuarios
                 preg_match('/^[a-zA-z0-9]+$/', $_POST["nuevoUsuario"]) &&
                 preg_match('/^[a-zA-z0-9]+$/', $_POST["nuevoPassword"])
             ) {
+                //rta vaciado
+                $ruta = "";
+                //validar imagen
+                if (isset($_FILES["nuevoFoto"]["tmp_name"])) {
+
+                    //capturando el las dimensiones de la foto|
+                    list($ancho, $alto) = getimagesize($_FILES["nuevoFoto"]["tmp_name"]);
+                    $nuevoAncho = 500;
+                    $nuevoAlto = 500;
+
+                    //crear el directorio donde se alamacena la foto
+                    $directorio = "views/dist/img/usuarios/" . $_POST["nuevoUsuario"];
+                    mkdir($directorio, 0755);
+
+                    //deacuerdo al tipo de imagen aplicamos funciones
+                    if ($_FILES["nuevoFoto"]["type"] == "image/jpeg") {
+                        //crear nuero aleatorio para el nombre de la foto
+                        $aleatorio = mt_rand(100, 999);
+
+                        //guardar en la siguiente ruta
+                        $ruta = "views/dist/img/usuarios/" . $_POST["nuevoUsuario"] . "/" . $aleatorio . ".jpg";
+
+                        $origen = imagecreatefromjpeg($_FILES["nuevoFoto"]["tmp_name"]);
+
+                        $destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+                        //cambiar el tamaño de la imagen
+                        imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+                        //guardar la imagen em el servidor
+                        imagejpeg($destino, $ruta);
+                    }
+
+                    if ($_FILES["nuevoFoto"]["type"] == "image/png") {
+                        //crear nuero aleatorio para el nombre de la foto
+                        $aleatorio = mt_rand(100, 999);
+
+                        //guardar en la siguiente ruta
+                        $ruta = "views/dist/img/usuarios/" . $_POST["nuevoUsuario"] . "/" . $aleatorio . ".png";
+
+                        $origen = imagecreatefrompng($_FILES["nuevoFoto"]["tmp_name"]);
+
+                        $destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+                        //cambiar el tamaño de la imagen
+                        imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+                        //guardar la imagen em el servidor
+                        imagepng($destino, $ruta);
+                    }
+                }
+
                 $tabla = "usuarios";
 
                 $datos = array(
                     "nombre" => $_POST["nuevoNombre"],
                     "usuario" => $_POST["nuevoUsuario"],
                     "password" => $_POST["nuevoPassword"],
-                    "perfil" => $_POST["nuevoPerfil"]
+                    "perfil" => $_POST["nuevoPerfil"],
+                    "foto" => $ruta
                 );
 
                 $respuesta = ModeloUsuarios::mdlIngresarUsuario($tabla, $datos);
